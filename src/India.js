@@ -1,9 +1,9 @@
 import './App.css';
-import ImageScrollMagellan from "./Img";
-import MagellanGif from "./magellan.gif";
-import FernandoMagellan from "./Fernando Magellan.jpg";
-import DaGamaMap from "./Map-voyage-Vasco-da-Gama.webp";
-import DaGama from "./vasco-da-gama-lands-in-calicut.webp";
+import ImageScrollMagellan from "./ImgScroll/Img";
+import DaGamaMap from "./photos/Map-voyage-Vasco-da-Gama.webp";
+import DaGama from "./photos/vasco-da-gama-lands-in-calicut.webp";
+import ImageOnScrollGama from "./ImgScroll/ImgA";
+import DaGamaCalicut from "./photos/calicut.webp";
 import React, {useEffect, useRef} from "react";
 import SceneInit from "./SceneInit";
 import {GLTFLoader} from "three/addons/loaders/GLTFLoader";
@@ -20,6 +20,7 @@ const myTitle = {
 const mySubtitle1 = {
     color: '#f9f9f9',
     fontSize: 50,
+    paddingTop: 50,
     fontFamily: "Playfair Display",
     textAlign: 'center'
 }
@@ -29,7 +30,7 @@ const mySubtitle2 = {
     fontFamily: "Playfair Display",
     textAlign: 'left',
     paddingLeft: window.innerWidth / 6,
-    paddingTop: 60
+    paddingTop: 0
 }
 const mySubtitle3 = {
     color: '#f9f9f9',
@@ -38,6 +39,13 @@ const mySubtitle3 = {
     textAlign: 'left',
     paddingLeft: window.innerWidth / 7.5,
     paddingTop: 60
+}
+const mySubtitle4 = {
+    color: '#f9f9f9',
+    fontSize: 50,
+    fontFamily: "Playfair Display",
+    textAlign: 'left',
+    paddingLeft: 70,
 }
 const myText1 = {
     color: '#f9f9f9',
@@ -52,13 +60,23 @@ const myText1 = {
 const myText2 = {
     color: '#f9f9f9',
     paddingTop: 10,
-    paddingBottom: 150,
+    paddingBottom: 0,
     paddingLeft: window.innerWidth / 16,
     marginRight: window.innerWidth / 15,
     fontSize: 18,
     fontFamily: "Playfair Display",
-    textAlign: 'center',
+    textAlign: 'justify',
     display: 'inline-block'
+}
+const myText4 = {
+    color: '#f9f9f9',
+    paddingTop: 10,
+    paddingBottom: 0,
+    paddingLeft: 70,
+    marginRight: window.innerWidth / 15,
+    fontSize: 18,
+    fontFamily: "Playfair Display",
+    textAlign: 'justify',
 }
 const myDescription = {
     color: '#b3b9bd',
@@ -68,7 +86,6 @@ const myDescription = {
     paddingLeft: 100,
     paddingBottom: 100
 }
-
 
 function RefFunction (ref)
 {
@@ -104,49 +121,51 @@ export default function MyApp() {
     const ref2 = useRef(null);
     const ref3 = useRef(null);
     const ref4 = useRef(null);
+    const ref5 = useRef(null);
+    const ref6 = useRef(null);
     RefFunction(ref1);
     RefFunction(ref2);
     RefFunction(ref3);
     RefFunction(ref4);
+    RefFunction(ref5);
+    RefFunction(ref6);
 
-    useEffect(() => {
-        const test = new SceneInit('myThreeJsCanvas');
-        test.initialize();
-        test.animate();
-
-        let loadedModel;
-        const gltfLoader = new GLTFLoader();
-        gltfLoader.load('/galleon/scene.gltf', (gltfScene) => {
-            loadedModel = gltfScene;
-            console.log(loadedModel);
-
-            gltfScene.scene.rotation.y = Math.PI / 8;
-            gltfScene.scene.position.y = -3;
-            gltfScene.scene.scale.set(0.01, 0.01, 0.01);
-            test.scene.add(gltfScene.scene);
-        });
-
-        const animate = () => {
-            if (loadedModel) {
-                // loadedModel.scene.rotation.x += 0.01;
-                loadedModel.scene.rotation.y += 0.01;
-                // loadedModel.scene.rotation.z += 0.01;
-            }
-            requestAnimationFrame(animate);
-        };
-        animate();
-    }, []);
+    // useEffect(() => {
+    //     const test = new SceneInit('myThreeJsCanvas2');
+    //     test.initialize();
+    //     test.animate();
+    //
+    //     let loadedModel;
+    //     const gltfLoader = new GLTFLoader();
+    //     gltfLoader.load('/gama/scene.gltf', (gltfScene) => {
+    //         loadedModel = gltfScene;
+    //         console.log(loadedModel);
+    //
+    //         gltfScene.scene.rotation.y = Math.PI / 8;
+    //         gltfScene.scene.position.y = -3;
+    //         gltfScene.scene.scale.set(0.01, 0.01, 0.01);
+    //         test.scene.add(gltfScene.scene);
+    //     });
+    //
+    //     const animate = () => {
+    //         if (loadedModel) {
+    //             // loadedModel.scene.rotation.x += 0.01;
+    //             loadedModel.scene.rotation.y += 0.01;
+    //             // loadedModel.scene.rotation.z += 0.01;
+    //         }
+    //         requestAnimationFrame(animate);
+    //     };
+    //     animate();
+    // }, []);
 
     return (
         <div className="App">
             <div ref={ref1}>
-                <p style = {myTitle}>Înconjorul lumii</p>
+                <p style = {myTitle}>Descoperirea Indiei</p>
             </div>
-            {/*<p style = {{padding: 250}}></p>*/}
-            {/*<img src = {BoatImage} alt = "boat" />*/}
-            <ImageScrollMagellan/>
+            <ImageOnScrollGama/>
 
-            <p style = {{padding: 0.4 * window.innerWidth}}> </p>
+            <p style = {{padding: 0.64 * window.innerWidth}}> </p>
             <div ref={ref2}>
                 <p style = {mySubtitle1}> Drumul estului: Vasco da Gama </p>
                 <p style = {myText1}>
@@ -160,22 +179,49 @@ export default function MyApp() {
                 </p>
             </div>
             <div ref={ref3}>
+                <p style = {mySubtitle4}>Înconjorul Africii</p>
+                <p style = {myText4}>
+                    Din cauza unui buget redus, Da Gama pornește în călătorie alături de doar 150 de oameni, însă printre
+                    ei se aflau printre cei mai experimentați exploratori și lingviști ai vremii.<br/>
+                    Vasco da Gama a părăsit Lisabona la 8 iulie 1497. Bartolomeo Diaz a însoțit grupul până în Insulele Canare, iar
+                    apoi până în Insulele Capului Verde. Pentru următoarea etapă a călătoriei, Diaz i-a sfătuit să meargă pe o rută
+                    neobișnuită, pe direcția vest-sud vest, înspre largul Atlanticului, pentru a evita zona calmurilor din Golful Guineei.
+                    Urmând această rută, portughezii au ajuns la circa 1000 de kilometri de coastele braziliene înainte ca vânturile
+                    sud-vestice să-i împingă înspre Sudul Africii. Pe 7 noiembrie, au ajuns în Portul Sf. Elena, la 200 de kilometri
+                    nord de Capul Bunei Speranțe. Trecurseră 13 săptămâni de când exploratorii văzuseră ultima oară uscatul, după ce
+                    parcuseseră o distanță de peste 7200 de kilometri de la Capul Verde.<br/><br/>
+                </p>
                 <div className="container">
-                    <img src = {DaGamaMap} alt = "" style = {{height: window.innerHeight / 1.5, paddingLeft: 30}}/>
-                    <div>
-                        <p style = {mySubtitle3}>Înconjorul Africii</p>
-                        <p style = {myText2}>
-                            Din cauza unui buget redus, Da Gama pornește în c
-                            <br/><br/>
-                            Datorită călătoriei parcurse de Da Gama, o jumatate a Pământului devenise deja cunoscută, iar existența
-                            unei rute între Europa și Asia a fost demonstrată. Călătoria lui Da Gama a reprezentat o realizare epocală,
-                            deși acesta nu a reușit să rămână în conștiința omenirii ca o figura eroica, fapt cauzat de violența, suspiciunea
-                            și comportamentul lui lipsit de diplomație ce dau naștere unei relații tensionate dintre Europa și Africa de la bun început.
-                        </p>
-                    </div>
-
+                    <img src = {DaGamaMap} alt = "Harta calatorie" style = {{height: window.innerHeight / 1.5, paddingTop: 10, paddingLeft: 70}}/>
+                    <p style = {myText2}>
+                        Două zile mai târziu, flota lui da Gama a înconjurat Capul Bunei Speranțe și a oprit la Mossel Bay. Nava cu
+                        provizii a fost arsă, iar proviziile redistribuite celorlalte trei nave. În ziua de Crăciun, grupul a început
+                        călătoria spre nord, de-a lungul coastelor estice ale Africii de Sud. Navigând spre nord împotriva unui curent
+                        puternic, grupul lui da Gama a călătorit 2700 de kilometri de-a lungul coastei, iar pe 2 martie 1498 a ajuns în
+                        portul Mozambique, primul dintr-un șir de orașe-stat musulmane aflate la extrema sudică a zonei de influență
+                        musulmană din Africa de Est. Exploratorii nu au fost primiți bine de Sultan; darurile lor, considerate fără valoare,
+                        au fost respinse. Asta se explică prin faptul că, în ciuda investițiilor masive în acea expediție, portughezii
+                        subestimaseră calitatea bunurilor de pe piețele din această lume: bumbac, fildeș, aur și perle. Grupul și-a continuat
+                        călătoria spre nord, ajungând la Mombassa, unde au fost primiți la fel. Doar liderul din Malindi a fost mai binevoitor
+                        față de grupul de europeni, iar în timpul șederii sale acolo, da Gama a recrutat un marinar foarte experimentat – se
+                        poate să fie vorba de faimosul marinar arab Ahmen Ibn Majid – care să le arate ruta către India.
+                    </p>
                 </div>
             </div>
+            <br/><br/>
+            <img src = {DaGamaCalicut} alt = "Calicut" style = {{width: window.innerWidth / 1.3}}/>
+            <hr
+                style={{
+                    background: '#b3b9bd',
+                    color: '#b3b9bd',
+                    borderColor: '#b3b9bd',
+                    height: '0.5px',
+                    marginLeft: '70px',
+                    marginRight: '70px',
+                    marginBottom: '3px'
+                }}
+            />
+            <h1 style={myDescription}>Tablou din portul Calicut, India</h1>
             <div ref={ref4}>
                 <div className="container">
                     <div>
@@ -199,7 +245,6 @@ export default function MyApp() {
                     <img src = {DaGama} alt = "" style = {{height: window.innerHeight + 20, paddingRight: 0}}/>
                 </div>
             </div>
-            <canvas id="myThreeJsCanvas" />
         </div>
     );
 }

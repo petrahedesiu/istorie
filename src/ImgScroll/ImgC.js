@@ -1,7 +1,7 @@
 import React from 'react';
-import myImage from "./home_map.JPG";
+import myImageColumb from "./columb map.jpg";
 
-class ImageScroll extends React.Component {
+class ImageScrollColumb extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -27,15 +27,14 @@ class ImageScroll extends React.Component {
 
     render() {
         const {scrollPosition} = this.state;
-        var imageSize = 900 + scrollPosition; // Modify the image size based on the scroll position
+        var imageSize = 2 * window.innerWidth / 3 + scrollPosition / 2; // Modify the image size based on the scroll position
         if (imageSize > window.innerWidth)
             imageSize = window.innerWidth;
         return (
             <div className="image-container">
-                <img src={myImage} alt="My Image" className="my-image" style={{width: imageSize,
-                    paddingLeft: Math.max(0, (window.innerWidth-imageSize)/2)}}/>
+                <img src={myImageColumb} alt="My Image" style={{width: imageSize}}/>
             </div>
         );
     }
 }
-export default ImageScroll;
+export default ImageScrollColumb;
