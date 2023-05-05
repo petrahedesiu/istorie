@@ -2,10 +2,11 @@ import './App.css';
 import ImageScrollMagellan from "./ImgScroll/Img";
 import DaGamaMap from "./photos/Map-voyage-Vasco-da-Gama.webp";
 import DaGama from "./photos/vasco-da-gama-lands-in-calicut.webp";
-import ImageOnScrollGama from "./ImgScroll/ImgA";
+import ImageOnScrollGama from "./ImgScroll/ImgIndia";
 import DaGamaCalicut from "./photos/calicut.webp";
 import React, {useEffect, useRef} from "react";
-import SceneInit from "./SceneInit";
+import SceneInit from "./Scenes/SceneInitIndia";
+import SceneInitStatic from "./Scenes/SceneInitStatic";
 import {GLTFLoader} from "three/addons/loaders/GLTFLoader";
 import "./Navbar.css";
 
@@ -130,33 +131,61 @@ export default function MyApp() {
     RefFunction(ref5);
     RefFunction(ref6);
 
-    // useEffect(() => {
-    //     const test = new SceneInit('myThreeJsCanvas2');
-    //     test.initialize();
-    //     test.animate();
-    //
-    //     let loadedModel;
-    //     const gltfLoader = new GLTFLoader();
-    //     gltfLoader.load('/gama/scene.gltf', (gltfScene) => {
-    //         loadedModel = gltfScene;
-    //         console.log(loadedModel);
-    //
-    //         gltfScene.scene.rotation.y = Math.PI / 8;
-    //         gltfScene.scene.position.y = -3;
-    //         gltfScene.scene.scale.set(0.01, 0.01, 0.01);
-    //         test.scene.add(gltfScene.scene);
-    //     });
-    //
-    //     const animate = () => {
-    //         if (loadedModel) {
-    //             // loadedModel.scene.rotation.x += 0.01;
-    //             loadedModel.scene.rotation.y += 0.01;
-    //             // loadedModel.scene.rotation.z += 0.01;
-    //         }
-    //         requestAnimationFrame(animate);
-    //     };
-    //     animate();
-    // }, []);
+    useEffect(() => {
+        const test = new SceneInitStatic('myThreeJsCanvas2');
+        test.initialize();
+        test.animate();
+
+        let loadedModel;
+        const glftLoader = new GLTFLoader();
+        glftLoader.load('/gama/scene.gltf', (gltfScene) => {
+            loadedModel = gltfScene;
+            console.log(loadedModel);
+
+            gltfScene.scene.rotation.y = Math.PI / 8;
+            gltfScene.scene.position.y = -0.01;
+            gltfScene.scene.scale.set(0.01, 0.01, 0.01);
+            test.scene.add(gltfScene.scene);
+        });
+
+        const animate = () => {
+            if (loadedModel) {
+                // loadedModel.scene.rotation.x += 0.01;
+                loadedModel.scene.rotation.y += 0.01;
+                // loadedModel.scene.rotation.z += 0.01;
+            }
+            requestAnimationFrame(animate);
+        };
+        animate();
+    }, []);
+
+    useEffect(() => {
+        const test = new SceneInit('myThreeJsCanvas3');
+        test.initialize();
+        test.animate();
+
+        let loadedModel;
+        const gltfLoader = new GLTFLoader();
+        gltfLoader.load('/carrack/scene.gltf', (gltfScene) => {
+            loadedModel = gltfScene;
+            console.log(loadedModel);
+
+            gltfScene.scene.rotation.y = Math.PI / 8;
+            gltfScene.scene.position.y = 0.01;
+            gltfScene.scene.scale.set(0.01, 0.01, 0.01);
+            test.scene.add(gltfScene.scene);
+        });
+
+        const animate = () => {
+            if (loadedModel) {
+                // loadedModel.scene.rotation.x += 0.01;
+                loadedModel.scene.rotation.y += 0.01;
+                // loadedModel.scene.rotation.z += 0.01;
+            }
+            requestAnimationFrame(animate);
+        };
+        animate();
+    }, []);
 
     return (
         <div className="App">
@@ -165,7 +194,7 @@ export default function MyApp() {
             </div>
             <ImageOnScrollGama/>
 
-            <p style = {{padding: 0.64 * window.innerWidth}}> </p>
+            <p style = {{padding: 0.33 * window.innerWidth}}> </p>
             <div ref={ref2}>
                 <p style = {mySubtitle1}> Drumul estului: Vasco da Gama </p>
                 <p style = {myText1}>
@@ -186,29 +215,27 @@ export default function MyApp() {
                     Vasco da Gama a părăsit Lisabona la 8 iulie 1497. Bartolomeo Diaz a însoțit grupul până în Insulele Canare, iar
                     apoi până în Insulele Capului Verde. Pentru următoarea etapă a călătoriei, Diaz i-a sfătuit să meargă pe o rută
                     neobișnuită, pe direcția vest-sud vest, înspre largul Atlanticului, pentru a evita zona calmurilor din Golful Guineei.
-                    Urmând această rută, portughezii au ajuns la circa 1000 de kilometri de coastele braziliene înainte ca vânturile
-                    sud-vestice să-i împingă înspre Sudul Africii. Pe 7 noiembrie, au ajuns în Portul Sf. Elena, la 200 de kilometri
-                    nord de Capul Bunei Speranțe. Trecurseră 13 săptămâni de când exploratorii văzuseră ultima oară uscatul, după ce
-                    parcuseseră o distanță de peste 7200 de kilometri de la Capul Verde.<br/><br/>
+                    <br/><br/>
                 </p>
                 <div className="container">
-                    <img src = {DaGamaMap} alt = "Harta calatorie" style = {{height: window.innerHeight / 1.5, paddingTop: 10, paddingLeft: 70}}/>
+                    <img src = {DaGamaMap} alt = "Harta calatorie" style = {{height: window.innerHeight / 1.7, paddingTop: 10, paddingLeft: 70}}/>
                     <p style = {myText2}>
-                        Două zile mai târziu, flota lui da Gama a înconjurat Capul Bunei Speranțe și a oprit la Mossel Bay. Nava cu
-                        provizii a fost arsă, iar proviziile redistribuite celorlalte trei nave. În ziua de Crăciun, grupul a început
-                        călătoria spre nord, de-a lungul coastelor estice ale Africii de Sud. Navigând spre nord împotriva unui curent
-                        puternic, grupul lui da Gama a călătorit 2700 de kilometri de-a lungul coastei, iar pe 2 martie 1498 a ajuns în
-                        portul Mozambique, primul dintr-un șir de orașe-stat musulmane aflate la extrema sudică a zonei de influență
-                        musulmană din Africa de Est. Exploratorii nu au fost primiți bine de Sultan; darurile lor, considerate fără valoare,
-                        au fost respinse. Asta se explică prin faptul că, în ciuda investițiilor masive în acea expediție, portughezii
-                        subestimaseră calitatea bunurilor de pe piețele din această lume: bumbac, fildeș, aur și perle. Grupul și-a continuat
-                        călătoria spre nord, ajungând la Mombassa, unde au fost primiți la fel. Doar liderul din Malindi a fost mai binevoitor
-                        față de grupul de europeni, iar în timpul șederii sale acolo, da Gama a recrutat un marinar foarte experimentat – se
-                        poate să fie vorba de faimosul marinar arab Ahmen Ibn Majid – care să le arate ruta către India.
+                        Ruta traseului urmat: <br/>
+                        ◦ A plecat din Lisabona, Portugalia, la 8 iulie 1497 <br/>
+                        ◦ A navigat pe coasta Africii, trecând de Capul Bunei Speranțe și oprește la: <br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Insulele Cape Verde <br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Insula Sf. Elena <br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Golful Aden <br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Mombasa, Kenia, pe 7 aprilie 1498, <br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Malindi, Kenia <br/>
+                        ◦ În urma unor negocieri dificile și a unui incident de violență, da Gama a reușit să obțină acordul de a deschide un port comercial în orașul Calicut, India.<br/>
+                        ◦ A ajuns în Calicut pe 20 mai 1498, stabilind astfel prima rută maritimă directă dintre Europa și India.<br/>
+                        ◦ După trei luni în India, Da Gama s-a întors pe coasta Africii pentru a ajunge din nou în Portugalia.<br/>
+                        ◦ A ajuns în Lisabona pe 29 august 1499, încheind astfel o călătorie care a durat aproape doi ani.<br/>
                     </p>
                 </div>
             </div>
-            <br/><br/>
+            <br/><br/><br/><br/>
             <img src = {DaGamaCalicut} alt = "Calicut" style = {{width: window.innerWidth / 1.3}}/>
             <hr
                 style={{
@@ -244,6 +271,23 @@ export default function MyApp() {
                     </div>
                     <img src = {DaGama} alt = "" style = {{height: window.innerHeight + 20, paddingRight: 0}}/>
                 </div>
+            </div>
+            <hr
+                style={{
+                    background: '#b3b9bd',
+                    color: '#b3b9bd',
+                    borderColor: '#b3b9bd',
+                    height: '0.5px',
+                    marginLeft: '100px',
+                    marginRight: '100px',
+                    marginBottom: '3px'
+                }}
+            />
+            <p style={{paddingTop: 40}}></p>
+            <span style={mySubtitle1}>Vasco Da Gama cu un vas portughez</span>
+            <div className="container">
+                <canvas id="myThreeJsCanvas2" />
+                <canvas id="myThreeJsCanvas3" />
             </div>
         </div>
     );

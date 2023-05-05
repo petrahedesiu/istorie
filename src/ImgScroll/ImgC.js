@@ -1,5 +1,5 @@
 import React from 'react';
-import myImageColumb from "./columb map.jpg";
+import myImageColumb from "../photos/columb map.jpg";
 
 class ImageScrollColumb extends React.Component {
     constructor(props) {

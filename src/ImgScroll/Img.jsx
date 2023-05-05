@@ -1,5 +1,5 @@
 import React from 'react';
-import myImageMagellan from "./worldmap.jpg";
+import myImageMagellan from "../photos/worldmap.jpg";
 
 class ImageScrollMagellan extends React.Component {
     constructor(props) {

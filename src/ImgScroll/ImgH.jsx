@@ -1,5 +1,5 @@
 import React from "react";
-import myImageHome from "./photos/home_map.JPG";
+import myImageHome from "../photos/home_map.JPG";
 
 class ImageScrollHome extends React.Component {
     constructor(props) {

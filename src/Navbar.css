@@ -74,6 +74,7 @@ a {
         align-items: center;
         width: 100%;
         margin: 0 auto;
+        position: relative;
     }
 }
 
@@ -84,110 +85,3 @@ a {
     }
 
 }
-
-
-/*
-.navbar {
-    !*background-color: #B6B2A5;*!
-    background-color: #4d4231;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 80px;
-    position: relative;
-    z-index: 1;
-}
-
-.navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 80px;
-    padding: 0 50px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.navbar-logo {
-    font-size: 2rem;
-    text-decoration: none;
-    color: #c9c6c1;
-}
-
-.menu-icon {
-    display: none;
-    font-size: 1.5rem;
-    cursor: auto;
-}
-
-.nav-menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    text-align: center;
-}
-
-.nav-item {
-    height: 80px;
-}
-
-.nav-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.2rem;
-    height: 100%;
-    padding: 0 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.nav-link:hover {
-    color: #0f3d47;
-}
-
-@media screen and (max-width: 960px) {
-    .navbar-container {
-        padding: 0 30px;
-    }
-    .menu-icon {
-        display: block;
-    }
-    .nav-menu {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 100vh;
-        position: absolute;
-        top: 80px;
-        left: -100%;
-        opacity: 1;
-        transition: all 0.5s ease;
-    }
-    .nav-menu.active {
-        background-color: #333333;
-        left: 0;
-        opacity: 1;
-        transition: all 0.5s ease;
-        z-index: 1;
-    }
-    .nav-item {
-        width: 100%;
-    }
-    .nav-link {
-        text-align: center;
-        padding: 2rem;
-        width: 100%;
-        display: table;
-    }
-    .nav-link:hover {
-        background-color: #F6F5F5;
-        color: #fff;
-    }
-}
-*/
