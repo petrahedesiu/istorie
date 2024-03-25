@@ -1,4 +1,4 @@
-. App {
+.App {
   text-align: center;
 }
 
@@ -73,4 +73,9 @@ br {
   width: 100%;
   height: 100%;
   box-shadow: 0px 0 100px 10px rgba(0,0,0,0.9) inset;
+}
+
+.img {
+  margin: '0 auto';
+  display: 'block'
 }
