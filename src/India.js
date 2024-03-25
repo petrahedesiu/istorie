@@ -132,34 +132,6 @@ export default function MyApp() {
     RefFunction(ref6);
 
     useEffect(() => {
-        const test = new SceneInitStatic('myThreeJsCanvas2');
-        test.initialize();
-        test.animate();
-
-        let loadedModel;
-        const glftLoader = new GLTFLoader();
-        glftLoader.load('/gama/scene.gltf', (gltfScene) => {
-            loadedModel = gltfScene;
-            console.log(loadedModel);
-
-            gltfScene.scene.rotation.y = Math.PI / 8;
-            gltfScene.scene.position.y = -0.01;
-            gltfScene.scene.scale.set(0.01, 0.01, 0.01);
-            test.scene.add(gltfScene.scene);
-        });
-
-        const animate = () => {
-            if (loadedModel) {
-                // loadedModel.scene.rotation.x += 0.01;
-                loadedModel.scene.rotation.y += 0.01;
-                // loadedModel.scene.rotation.z += 0.01;
-            }
-            requestAnimationFrame(animate);
-        };
-        animate();
-    }, []);
-
-    useEffect(() => {
         const test = new SceneInit('myThreeJsCanvas3');
         test.initialize();
         test.animate();
@@ -208,7 +180,7 @@ export default function MyApp() {
                 </p>
             </div>
             <div ref={ref3}>
-                <p style = {mySubtitle4}>Înconjorul Africii</p>
+                <p style = {mySubtitle4}>Înconjurul Africii</p>
                 <p style = {myText4}>
                     Din cauza unui buget redus, Da Gama pornește în călătorie alături de doar 150 de oameni, însă printre
                     ei se aflau printre cei mai experimentați exploratori și lingviști ai vremii.<br/>
@@ -284,10 +256,9 @@ export default function MyApp() {
                 }}
             />
             <p style={{paddingTop: 40}}></p>
-            <span style={mySubtitle1}>Vasco Da Gama cu un vas portughez</span>
+            <span style={mySubtitle1}>Vas din flota portugheză</span>
             <div className="container">
-                <canvas id="myThreeJsCanvas2" />
-                <canvas id="myThreeJsCanvas3" />
+                <canvas id="myThreeJsCanvas3"/>
             </div>
         </div>
     );

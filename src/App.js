@@ -6,6 +6,8 @@ import Inconjor from "./Magellan";
 import Teste from "./Teste";
 import DaGama from "./India";
 import America from "./America";
+import Oceania from "./Oceania";
+import Africa from "./Africa";
 import "./Navbar.css";
 import AnimatedCursor from "react-animated-cursor";
 import {PlaySound} from "./Music";
@@ -44,16 +46,20 @@ function App() {
                 <h1 className="logo"><a href="/">Marile descoperiri geografice</a></h1>
                 <ul className="main-nav">
                     <li><a href="/">Acasă</a></li>
-                    <li><a href="/india">Descoperirea Indiei</a></li>
-                    <li><a href="/america">Descoperirea Americii</a></li>
-                    <li><a href="/inconjor">Înconjorul lumii</a></li>
+                    <li><a href="/africa">Africa</a></li>
+                    <li><a href="/india">India</a></li>
+                    <li><a href="/america">America</a></li>
+                    <li><a href="/inconjorul_lumii">Înconjurul lumii</a></li>
+                    <li><a href="/oceania">Oceania</a></li>
                     <li><a href="/teste">Teste</a></li>
                 </ul>
             </header>
             <Route path="/" exact component={Home} />
+            <Route path="/africa" component={Africa} />
             <Route path="/india" component={DaGama} />
             <Route path="/america" component={America} />
-            <Route path="/inconjor" component={Inconjor} />
+            <Route path="/oceania" component={Oceania} />
+            <Route path="/inconjorul_lumii" component={Inconjor} />
             <Route path="/teste" component={Teste} />
         </Router>
     );

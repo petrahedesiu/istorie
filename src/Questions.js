@@ -6,35 +6,73 @@ export const quiz = {
     questions: [
         {
             question:
-                'Question 1',
-            choices: ['answer 1', 'answer 2', 'answer 3', 'None of the above'],
+                'Descoperirea Americii a realizat-o navigatorul: ',
+            choices: ['Fernando Magellan', 'Vasco da Gama', 'Cristofor Columb', 'Bartolomeu Dias'],
             type: 'MCQs',
-            theme: 'america',
-            correctAnswer: 'answer 1',
+            correctAnswer: 'Cristofor Columb',
         },
         {
             question:
-                'Question 2',
-            choices: ['answer 1', 'answer 2', 'answer 3', 'None of the above'],
+                'Conchistadorii sunt cuceritorii: ',
+            choices: ['spanioli', 'italieni', 'portughezi', 'englezi'],
             type: 'MCQs',
-            theme: 'india',
-            correctAnswer: 'answer 2',
+            correctAnswer: 'spanioli',
         },
         {
             question:
-                'Question 3',
-            choices: ['answer 1', 'answer 2', 'answer 3', 'None of the above'],
+                'Navigatorul care a ajuns în insulele din America Centrală în anul 1492 a fost: ',
+            choices: ['Amerigo Vespucci', 'Fernando Magellan', 'Cristofor Columb', 'Marco Polo'],
             type: 'MCQs',
-            theme: 'america',
-            correctAnswer: 'answer 4',
+            correctAnswer: 'Cristofor Columb',
         },
         {
             question:
-                'Question 4',
-            choices: ['answer 1', 'answer 2', 'answer 3', 'None of the above'],
+                'Oceania a fost explorată de: ',
+            choices: ['Marco Polo', 'Fernando Magellan', 'Cristofor Columb', 'James Cook'],
             type: 'MCQs',
-            theme: 'magellan',
-            correctAnswer: 'answer 3',
+            correctAnswer: 'James Cook',
+        },
+        {
+            question:
+                'Numele navei exploratorului James Cook în timpul primei expediții a fost: ',
+            choices: ['Santa Maria', 'Endeavour', 'Enterpreise', 'Resolution'],
+            type: 'MCQs',
+            correctAnswer: 'Endeavour',
+        },
+        {
+            question:
+                'În urma descoperirilor geografice centrul comerțului european se mută din Marea Mediterană în zona: ',
+            choices: ['Oceanului Arctic', 'Oceanului Pacific', 'Oceanului Atlanic', 'Mării Adriatice'],
+            type: 'MCQs',
+            correctAnswer: 'Oceanului Atlantic',
+        },
+        {
+            question:
+                'Noul drum spre India a fost descoperit de portughezi, care au ocolit Africa.',
+            choices: ['Adevărat', 'Fals'],
+            type: "TF",
+            correctAnswer: 'Adevărat',
+        },
+        {
+            question:
+                'Cristofor Columb a luat parte la 3 expediții către America.',
+            choices: ['Adevărat', 'Fals'],
+            type: "TF",
+            correctAnswer: 'Fals',
+        },
+        {
+            question:
+                'Bartolomeu Dias a reușit să ajungă în India, ocolind sudul Africii.',
+            choices: ['Adevărat', 'Fals'],
+            type: "TF",
+            correctAnswer: 'Fals',
+        },
+        {
+            question:
+                'Dezvoltarea tehnicii de navigare a contribuit la marile descoperiri geografice',
+            choices: ['Adevărat', 'Fals'],
+            type: "TF",
+            correctAnswer: 'Adevărat',
         },
     ],
 }

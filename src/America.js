@@ -1,8 +1,12 @@
 import './App.css';
 import ImageScrollColumb from "./ImgScroll/ImgC";
-import MagellanGif from "./photos/magellan.gif";
-import FernandoMagellan from "./photos/Fernando Magellan.jpg";
-import MagellanTrip from "./photos/magellan trip.jpg";
+import Columbus from "./photos/Christopher_Columbus.jpg";
+import ColumbusTrip from "./photos/columbusgif.gif";
+import ColumbusMap from "./photos/columb map bck.png"
+import ColumbusThird from "./photos/columbus third.jpg";
+import ColumbusDebarcare from "./photos/columbus debarcare.jpg";
+import ColumbusAll from "./photos/columbus-all-voyages.jpg";
+import AmerigoAll from "./photos/amerigo vespucci.jpg";
 import React, {useEffect, useRef} from "react";
 import SceneInit from "./Scenes/SceneInit";
 import {GLTFLoader} from "three/addons/loaders/GLTFLoader";
@@ -28,7 +32,7 @@ const mySubtitle2 = {
     fontSize: 50,
     fontFamily: "Playfair Display",
     textAlign: 'left',
-    paddingLeft: window.innerWidth / 6,
+    paddingLeft: window.innerWidth / 7.5,
     paddingTop: 0
 }
 const mySubtitle3 = {
@@ -36,20 +40,31 @@ const mySubtitle3 = {
     fontSize: 50,
     fontFamily: "Playfair Display",
     textAlign: 'left',
-    paddingLeft: window.innerWidth / 9,
-    paddingTop: 60
+    paddingLeft: window.innerWidth / 8,
+    paddingTop: 0
 }
 const mySubtitle4 = {
     color: '#f9f9f9',
     fontSize: 50,
     fontFamily: "Playfair Display",
     textAlign: 'left',
+    paddingLeft: window.innerWidth / 5.5,
+    paddingTop: 0
+}
+const mySubtitle5 = {
+    color: '#f9f9f9',
+    paddingTop: 10,
+    paddingBottom: 0,
     paddingLeft: 70,
+    paddingRight: 70,
+    fontSize: 30,
+    fontFamily: "Playfair Display",
+    textAlign: 'center',
 }
 const myText1 = {
     color: '#f9f9f9',
     paddingTop: 10,
-    paddingBottom: 150,
+    paddingBottom: 10,
     paddingLeft: 300,
     paddingRight: 300,
     fontSize: 18,
@@ -71,21 +86,45 @@ const myText4 = {
     color: '#f9f9f9',
     paddingTop: 10,
     paddingBottom: 0,
-    paddingLeft: 70,
-    marginRight: window.innerWidth / 15,
-    fontSize: 18,
+    paddingLeft: 300,
+    paddingRight: 300,
+    fontSize: 22,
     fontFamily: "Playfair Display",
-    textAlign: 'left',
+    textAlign: 'center',
+    fontStyle: 'italic'
+}
+const myText5 = {
+    color: '#f9f9f9',
+    paddingTop: 10,
+    paddingBottom: 0,
+    paddingLeft: 80,
+    paddingRight: 80,
+    fontSize: 22,
+    fontFamily: "Playfair Display",
+    textAlign: 'justify',
+    display: 'inline-block'
 }
 const myDescription = {
     color: '#b3b9bd',
-    fontSize: 15,
+    fontSize: 17,
     fontFamily: "Playfair Display",
-    textAlign: 'left',
-    paddingLeft: 100,
-    paddingBottom: 100
+    textAlign: 'center',
+    paddingRight: 40,
 }
-
+const myDescription2 = {
+    color: '#b3b9bd',
+    fontSize: 17,
+    fontFamily: "Playfair Display",
+    textAlign: 'center',
+    paddingRight: 120,
+}
+const myDescription3 = {
+    color: '#b3b9bd',
+    fontSize: 17,
+    fontFamily: "Playfair Display",
+    textAlign: 'center',
+    paddingLeft: 400,
+}
 
 function RefFunction (ref)
 {
@@ -123,12 +162,16 @@ export default function MyApp() {
     const ref4 = useRef(null);
     const ref5 = useRef(null);
     const ref6 = useRef(null);
+    const ref7 = useRef(null);
+    const ref8 = useRef(null);
     RefFunction(ref1);
     RefFunction(ref2);
     RefFunction(ref3);
     RefFunction(ref4);
     RefFunction(ref5);
     RefFunction(ref6);
+    RefFunction(ref7);
+    RefFunction(ref8);
 
     useEffect(() => {
         const test = new SceneInit('myThreeJsCanvas');
@@ -165,20 +208,29 @@ export default function MyApp() {
             </div>
             <ImageScrollColumb/>
             <p style = {{padding: 0.37 * window.innerWidth}}> </p>
-
             <div ref={ref2}>
-                <p style = {mySubtitle1}> Marea călatorie în jurul lumii </p>
-                <p style = {myText1}>
-                    Fernando Magellan ramane cunoscut in istorie ca fiind primul european care a navigat in apele Oceanului
-                    Pacific, cel care a facut inconjurul lumii si primul care a gasit o cale de acces din Atlantic catre Pacific,
-                    prin stramtoarea Tarii de Foc. Convins ca exista o trecatoare in America de Sud si inspirat de Cristofor Columb,
-                    exploratorul portughez ii prezinta regelui Spaniei, Carol al V-lea, planul de a ajunge in Insulele Mirodeniilor.
-                    Pe 10 august 1519, Fernando Magellan porneste in calatoria vietii sale si ultima, de altfel. Exploratorul pleaca
-                    din Sevilla, cu 5 corabii si 270 de oameni la bordul acestora. Flota expeditiei era compusa din: Trinidad, San
-                    Antonio, Concepcion, Victoria si Santiago.
-                </p>
+                <p style = {myText4}>„Înălțimea Voastră...s-a gândit să mă trimită pe mine, Cristofor Columb, spre tărâmurile
+                    Indiei... și mi-a poruncit să nu călătoresc pe uscat în drumul meu spre est, așa cum se obișnuiește, ci să
+                    mă duc prin vest pe unde, până în ziua de azi, după câte știm, nimeni nu a mai călcat.”</p>
+                <p style = {myDescription2}>-Cristofor Columb, porlog la jurnal de bord, 1492</p>
             </div>
-            <img src = {MagellanGif} alt = "Magellan Gif" style = {{width: 1000}}/>
+            <p style={{paddingTop: 70}}></p>
+            <div ref={ref3}>
+                <div className="container">
+                    <div>
+                        <p style = {mySubtitle2}> Cristofor Columb </p>
+                        <p style = {myText2}>
+                            Cristofor Columb (1451-1506), născut la Genova, a fost un navigator italiano-spaniol. În 1478 s-a stabili
+                            în Portugalia, iar între 1482-1484 a făcut mai multe călătorii pe coastele Guineei, aflându-se în serviciul
+                            Portugaliei. A navigat spre vest, pe Oceanul Atlantic, în căutarea unei rute spre India, dar în data de 12
+                            octombrie 1492, navigatorul genovez Cristofor Columb a descoperit, întâmplător, America, ajungând în dreptul
+                            actualelor insule Bahamas. Deşi rezultatul explorărilor sale avea să reprezinte un punct de cotitură
+                            pentru întreaga istorie a umanităţii, Columb a murit convins că a fost primul european care a acostat în estul Asiei.
+                        </p>
+                    </div>
+                    <img src = {Columbus} alt = "Cristofer Columb" style = {{height: window.innerHeight + 20, paddingRight: 0}}/>
+                </div>
+            </div>
             <hr
                 style={{
                     background: '#b3b9bd',
@@ -190,28 +242,26 @@ export default function MyApp() {
                     marginBottom: '3px'
                 }}
             />
-            <h1 style={myDescription}>Traseul urmat de Fernando Magellan</h1>
-            <div ref={ref3}>
+            <div ref={ref4}>
                 <div className="container">
+                    <img src = {ColumbusTrip} alt = "Columb gif" style = {{height: window.innerHeight / 1.48, paddingLeft: 30}}/>
                     <div>
-                        <p style = {mySubtitle2}> Fernando Magellan </p>
+                        <p style = {mySubtitle3}> Prima călătorie </p>
+                        <p style = {myDescription}> (3 august 1492 – 15 martie 1493) </p>
                         <p style = {myText2}>
-                            Fernando Magellan știa că insulele cu mirodenii se găsesc în jumătatea de glob care revenea coroanei Spaniei,
-                            prin tratatul de la Tordesillas prin care castilienii și portughezii își împărțiseră lumea în 1494. Fernando
-                            Magellan era însă convins că poate ajunge și prin vest la insulele cu mirodenii – Insulele Spice – de care se
-                            apropiase deja în timpul călătoriei la Malacca. Do­rința sa de a ajunge prin vest la insulele cu mirodenii a
-                            fost susținută de Coroana Spaniolă. Acest impuls, pare să fi fost motorul ocolului Pământului, care nu făcea totuși
-                            parte din planul inițial. <br/><br/>
-                            Pe 20 septembrie 1519 Fernando Magellan și flota sa au plecat în expediția care avea să facă istorie. Aceștia au navigat
-                            prin Oceanul Atlantic, spre Patagonia, trecând prin Strâmtoarea Tuturor Sfinților. Această strâmtoare îi poartă numele,
-                            numindu-se Strâmtoarea Magellan.<br/><br/>
-                            Surpriza a fost găsirea unui „ocean gol”, pe care el l-a numit Pacific. Asta pentru că erau ape liniștite în timpul
-                            traversării din Țara de Foc până la Insulele Mariane, și apoi, la viitoarele Filipine. Această călătorie a durat trei
-                            luni și douăzeci de zile. La 16 martie 1521, Magellan a ajuns în Insulele Filipine, devenind astfel primul european care
-                            a pășit în arhipelag.
+                            Prima expediție pleacă din portul Palos de la Frontera cu navele Santa Maria (30 metri lungime, sub
+                            comanda sa), Pinta și Nina (caravele mici de 15 m lungime, comandate de către Martín Alonso Pinzón și
+                            Vicente Yañez Pinzón), alese pentru traversarea oceanului pe drumul alizeelor. <br/><br/>
+                            La 12 octombrie 1492, Lumea Nouă (America), este zărită. Sunt descoperite insulele: Santa Maria
+                            Conception, Fernandina, Isabella, Juna, Bohio. Columb a explorat la fel și coasta de nord-est a
+                            Cubei (28 octombrie), și coasta nordică a Hispaniolei, din 5 decembrie, unde a eșuat Santa Maria,
+                            în dimineața de Crăciun 1492, echipajul fiind nevoit s-o abandoneze, iar 39 de oameni fiind nevoiți
+                            să rămână pe insulă, întemeind așezarea La Navidad, localitate din Haiti. Înainte de a se întoarce în
+                            Spania, Columb a răpit între zece și douăzeci și cinci de indieni, pe care i-a luat cu el. Doar șapte
+                            sau opt din ei au ajuns vii în Spania, ei făcând o impresie deosebită la Sevilia. Pe 15 martie 1493
+                            Columb revine triumfător în Spania.
                         </p>
                     </div>
-                    <img src = {FernandoMagellan} alt = "Fernando Magellan" style = {{height: window.innerHeight + 20, paddingRight: 0}}/>
                 </div>
             </div>
             <hr
@@ -220,27 +270,148 @@ export default function MyApp() {
                     color: '#b3b9bd',
                     borderColor: '#b3b9bd',
                     height: '0.5px',
+                    marginLeft: '100px',
+                    marginRight: '100px',
+                    marginBottom: '3px'
                 }}
             />
-            <div ref={ref4}>
+            <div ref={ref5}>
                 <div className="container">
-                    <img src = {MagellanTrip} alt = "Fernando Magellan" style = {{height: window.innerHeight + 20, paddingLeft: 0}}/>
                     <div>
-                        <p style = {mySubtitle3}> Pacificul dinaintea morții </p>
+                        <p style = {mySubtitle2}> A doua călătorie </p>
+                        <p style = {myDescription2}> (1493-1496) </p>
                         <p style = {myText2}>
-                            După aproape 100 de zile pe mare, mulți dintre marinari au murit de scorbut și de foame. După un prim popas,
-                            în martie 1521, pe insula Guamul aflată în arhipelagul Marianelor, au plecat către Filipine, unde spaniolii
-                            au oficiat prima liturghie. Au ancorat apoi pe țărmul insulei Cebu, unde, datorită slujitorului personal al
-                            lui Magellan, Enrique, membri echipajului s-au putut înțelege cu băștinașii. Se spune că regele Rajah Humabon
-                            i-a plăcut atât de mult pe spanioli încât el și poporul lui s-au convertit la creștinism. Supunerea de bunăvoie
-                            și convertirea la creștinism au încercat-o și în cazul locuitorilor de pe insula Mactan. Lapu-Lapu, regele insulei
-                            filipineze, a refuzat, iar Magellan și echipajul lui, mult prea încrezători, i-au atacat. Calculele au fost greșite,
-                            spaniolii fiind depășiți numeric. Lovit de o săgeată din bambus otrăvită, Fernando Magellan moare pe 27 aprilie 1521.
+                            A doua călătorie a lui Cristofor Columb a urmat o rută mai sudică decât prima sa
+                            călătorie, și a constat în explorarea insulelor din Caraibe. Columb a călătorit cu o flotă de 17
+                            nave și aproximativ 1500 de oameni, a explorat insulele Guadeloupe, Dominica, Antigua, Puerto Rico,
+                            Haiti, Jamaica, Cuba și Puerto Rico, a întemeiat așezăminte precum La Navidad și Isabela și a
+                            descoperit insulele Turcești și Caicos și insula Mona. În cele din urmă, Columb s-a întors în
+                            Spania în 1496, după ce a lăsat în urmă o colonie instabilă în Hispaniola, iar călătoria sa a
+                            avut un impact important asupra istoriei Americii și a devenit un punct de plecare pentru colonizarea
+                            ulterioară a insulelor din Caraibe.
+
+                        </p>
+                    </div>
+                    <img src = {ColumbusMap} alt = "Cristofer Columb" style = {{width: window.innerWidth/ 2.3, paddingRight: 30, paddingTop: 20}}/>
+                </div>
+            </div>
+            <hr
+                style={{
+                    background: '#b3b9bd',
+                    color: '#b3b9bd',
+                    borderColor: '#b3b9bd',
+                    height: '0.5px',
+                    marginLeft: '100px',
+                    marginRight: '100px',
+                    marginBottom: '3px'
+                }}
+            />
+            <div ref={ref6}>
+                <div className="container">
+                    <img src = {ColumbusThird} alt = "Columb gif" style = {{height: window.innerHeight / 2, paddingLeft: 30}}/>
+                    <div>
+                        <p style = {mySubtitle4}> A treia călătorie </p>
+                        <p style = {myDescription}> (1498-1500) </p>
+                        <p style = {myText2}>
+                            A treia călătorie a lui Cristofor Columb (1498 și 1500) și a fost finanțată de regele Ferdinand și
+                            regina Isabella a Spaniei. Columb a navigat spre sud, explorând coasta Americii de Sud, inclusiv
+                            Venezuela, insulele Trinidad și Tobago și Insula Margarita. El a avut dificultăți în timpul acestei
+                            călătorii, inclusiv conflicte cu coloniile spaniole și probleme cu navele sale, dar a reușit să ajungă
+                            în cele din urmă în Spania în 1500.
                         </p>
                     </div>
                 </div>
             </div>
-
+            <hr
+                style={{
+                    background: '#b3b9bd',
+                    color: '#b3b9bd',
+                    borderColor: '#b3b9bd',
+                    height: '0.5px',
+                    marginLeft: '100px',
+                    marginRight: '100px',
+                    marginBottom: '3px'
+                }}
+            />
+            <div ref={ref7}>
+                <div className="container">
+                    <div>
+                        <p style = {mySubtitle3}> A patra călătorie </p>
+                        <p style = {myDescription2}> (1502-1504) </p>
+                        <p style = {myText2}>
+                            A patra și ultima călătorie a lui Columb a avut loc între 1502 și 1504 și a fost încă o dată finanțată
+                            de regii spanioli. De data aceasta, Columb a navigat spre vest, către America Centrală și America de Sud.
+                            El a explorat Coasta Rica, Panama și Jamaica, dar a întâmpinat probleme majore cu navele sale și a trebuit
+                            să se adăpostească într-un port portughez din Africa de Vest. După ce și-a reechipat navele, a încercat
+                            să navigheze înapoi spre America Centrală, dar a fost forțat să se întoarcă în Spania din cauza unei furtuni
+                            puternice.
+                        </p>
+                    </div>
+                    <img src = {ColumbusDebarcare} alt = "Cristofer Columb" style = {{height: window.innerHeight / 2, paddingRight: 30}}/>
+                </div>
+            </div>
+            <hr
+                style={{
+                    background: '#b3b9bd',
+                    color: '#b3b9bd',
+                    borderColor: '#b3b9bd',
+                    height: '0.5px',
+                    marginLeft: '100px',
+                    marginRight: '100px',
+                    marginBottom: '3px'
+                }}
+            />
+            <div ref={ref8}>
+                <p style = {mySubtitle1}> Amerigo Vespucci </p>
+                <p style = {myText1}>Amerigo Vespucci a fost un explorator italian care a călătorit de mai multe ori în America în timpul secolului al XV-lea. El a participat la expedițiile portugheze și spaniole în regiunea Atlanticului de Sud și de Est și a făcut o serie de descoperiri semnificative. Printre cele mai importante descoperiri ale lui Vespucci se numără:</p>
+                <div className="container">
+                    <div>
+                        <p style={mySubtitle5}>Prima călătorie (1499)</p>
+                        <p style = {myText5}>
+                            În 1499, Vespucci a fost trimis de regii spanioli într-o expediție în regiunea Atlanticului de Sud.
+                            El a navigat pe coasta Braziliei, recunoscând-o ca o nouă țară, numind-o "Terra Brasilis" sau
+                            "țara brazilor", și a ajuns până la estuarul Amazonului. Vespucci a scris un jurnal
+                            detaliat despre călătoria sa, în care a descris flora și fauna Americii de Sud, precum și tradițiile
+                            culturale ale populațiilor indigene.
+                        </p>
+                    </div>
+                    <div>
+                        <p style={mySubtitle5}>A doua călătorie (1501)</p>
+                        <p style = {myText5}>
+                            În 1500, Vespucci a plecat într-o a doua călătorie, de data aceasta alături de o flotă portugheză. El a
+                            navigat în jurul coastei de nord-est a Americii de Sud, ajungând până în Golful Paria, între Venezuela
+                            și Trinidad. Vespucci a scris și despre această călătorie în jurnalul său, subliniind importanța descoperirii
+                            sale, fiind primul european care a navigat pe coasta de est a Americii de Sud și a recunoscut-o ca
+                            un continent separat, realizând că teritoriile descoperite nu erau Asia, așa cum se credea înainte.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <hr
+                style={{
+                    background: '#b3b9bd',
+                    color: '#b3b9bd',
+                    borderColor: '#b3b9bd',
+                    height: '0.5px',
+                    marginLeft: '100px',
+                    marginRight: '100px',
+                    marginBottom: '30px'
+                }}
+            />
+            <div className="container">
+                <div>
+                    <img src = {ColumbusAll} alt = "Cristofor Columb" style = {{height: window.innerHeight / 2, paddingLeft: 180, paddingRight: 30, }}/>
+                    <p> Călătoriile lui Cristofor Columb </p>
+                </div>
+                <div>
+                    <img src = {AmerigoAll} alt = "Cristofer Columb" style = {{height: window.innerHeight / 2, paddingLeft: 50, paddingRight: 20, }}/>
+                    <p style = {myDescription2}> Călătoriile lui Cristofor Columb </p>
+                </div>
+            </div>
+            <div className="container">
+                <span style = {myDescription3}> Călătoriile lui Cristofor Columb </span>
+                <span style = {myDescription3}> Călătoriile lui Amerigo Vespucci </span>
+            </div>
             <hr
                 style={{
                     background: '#b3b9bd',
@@ -253,7 +424,7 @@ export default function MyApp() {
                 }}
             />
             <p style={{paddingTop: 40}}></p>
-            <span style={mySubtitle1}>Vasul Trinidad</span>
+            <span style={mySubtitle1}>Vasul Galleon</span>
             <canvas id="myThreeJsCanvas" />
         </div>
     );

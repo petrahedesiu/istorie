@@ -29,7 +29,7 @@ const mySubtitle2 = {
     fontSize: 50,
     fontFamily: "Playfair Display",
     textAlign: 'left',
-    paddingLeft: window.innerWidth / 6,
+    paddingLeft: window.innerWidth / 7.5,
     paddingTop: 0
 }
 const mySubtitle3 = {
@@ -131,65 +131,10 @@ export default function MyApp() {
     RefFunction(ref5);
     RefFunction(ref6);
 
-    useEffect(() => {
-        const test = new SceneInit('myThreeJsCanvas');
-        test.initialize();
-        test.animate();
-
-        let loadedModel;
-        const gltfLoader = new GLTFLoader();
-        gltfLoader.load('/galleon/scene.gltf', (gltfScene) => {
-            loadedModel = gltfScene;
-            console.log(loadedModel);
-            gltfScene.scene.rotation.y = Math.PI / 8;
-            gltfScene.scene.position.y = -3;
-            gltfScene.scene.scale.set(0.01, 0.01, 0.01);
-            test.scene.add(gltfScene.scene);
-        });
-
-        const animate = () => {
-            if (loadedModel) {
-                // loadedModel.scene.rotation.x += 0.01;
-                loadedModel.scene.rotation.y += 0.01;
-                // loadedModel.scene.rotation.z += 0.01;
-            }
-            requestAnimationFrame(animate);
-        };
-        animate();
-    }, []);
-
-    useEffect(() => {
-        const test = new SceneInitStatic('myThreeJsCanvas2');
-        test.initialize();
-        test.animate();
-
-        let loadedModel;
-        const glftLoader = new GLTFLoader();
-        glftLoader.load('/gama/scene.gltf', (gltfScene) => {
-            loadedModel = gltfScene;
-            console.log(loadedModel);
-
-            gltfScene.scene.rotation.y = Math.PI / 8;
-            gltfScene.scene.position.y = -0.01;
-            gltfScene.scene.scale.set(0.01, 0.01, 0.01);
-            test.scene.add(gltfScene.scene);
-        });
-
-        const animate = () => {
-            if (loadedModel) {
-                // loadedModel.scene.rotation.x += 0.01;
-                loadedModel.scene.rotation.y += 0.01;
-                // loadedModel.scene.rotation.z += 0.01;
-            }
-            requestAnimationFrame(animate);
-        };
-        animate();
-    }, []);
-
     return (
         <div className="App">
             <div ref={ref1}>
-                <p style = {myTitle}>Înconjorul lumii</p>
+                <p style = {myTitle}>Înconjurul lumii</p>
             </div>
             <ImageScrollMagellan/>
             <p style = {{padding: 0.4 * window.innerWidth}}> </p>
@@ -268,22 +213,6 @@ export default function MyApp() {
                     </div>
                 </div>
             </div>
-
-            <hr
-                style={{
-                    background: '#b3b9bd',
-                    color: '#b3b9bd',
-                    borderColor: '#b3b9bd',
-                    height: '0.5px',
-                    marginLeft: '100px',
-                    marginRight: '100px',
-                    marginBottom: '3px'
-                }}
-            />
-            <p style={{paddingTop: 40}}></p>
-            <span style={mySubtitle1}>Vasul Trinidad</span>
-            <canvas id="myThreeJsCanvas" />
-            <canvas id="myThreeJsCanvas2" />
         </div>
     );
 }

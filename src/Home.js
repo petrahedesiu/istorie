@@ -1,6 +1,7 @@
 import './App.css';
 import ImageScrollHome from "./ImgScroll/ImgH";
 import React, {useEffect, useRef} from "react";
+import Timeline from "./photos/Timeline.jpg";
 import SceneInit from "./Scenes/SceneInitStatic";
 import {GLTFLoader} from "three/addons/loaders/GLTFLoader";
 import "./Navbar.css";
@@ -122,6 +123,7 @@ export default function MyApp() {
                     fost stăpâniți de aceeași curiozitate insațibilă de a cerceta și de a trasa harta uni tărâm necunoscut.
                 </p>
             </div>
+            <img src = {Timeline} alt = "Timeline" style = {{height: window.innerHeight , marginRight: 0}}/>
             <div ref={ref3}>
                 <p style = {mySubtitle2}> Despre realizarea proiectului</p>
                 <p style = {myText2}>
@@ -132,13 +134,13 @@ export default function MyApp() {
                     - prof. Anca Lăpuștea (informatică)<br/>
                     - prof. Maria Riţiu (istorie) <br/>
                     <p style ={{fontStyle: "italic"}}> Bibliografie: </p>
-                    - Samuel Goldenberg: Epoca marilor descoperiri geografice <br/>
-                    - Sabin Belu: Descoperirea Americii <br/>
-                    - Sabin Belu: Istoria marilor descoperiri geografice <br/>
-                    - Enciclopedia marilor descoperiri geografice <br/>
+                    - Samuel Goldenberg și Sabin Belu: Epoca marilor descoperiri geografice - Editura Științifica - 1971<br/>
+                    - Jean Favier: Marile descoperiri de la Alexandru Macedon la Magellan - Editura Artemis - 1991 <br/>
+                    - Francisco Morales Padron: Istoria descoperirii si cuceririi Americii - Editura Științifica - 1979<br/>
+                    - Robin-Hanbury-Tenison: 70 de călătorii temerare de-a lungul istoriei - Editura Aquila - 2007  <br/>
                     - https://historia.ro<br/>
-                    - https://momenteistorice.ro/calatoria-uluitoare-lui-fernando-magellan <br/>
-                    <span style ={{fontStyle: "italic"}}> Muzică :</span> ...? <br/>
+                    - https://momenteistorice.ro<br/>
+                    - https://www.agerpres.ro/documentare<br/>
                 </p>
             </div>
         </div>

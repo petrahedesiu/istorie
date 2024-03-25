@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html lang="en" style="background-color: #002244"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="icon" href="http://localhost:3000/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    <link rel="apple-touch-icon" href="http://localhost:3000/logo192.png">
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>DpIT Webapp</title>
+  <script defer="" src="./DpIT Webapp_files/bundle.js.download"></script><style>body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9pbmRleC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxTQUFTO0VBQ1Q7O2NBRVk7RUFDWixtQ0FBbUM7RUFDbkMsa0NBQWtDO0FBQ3BDOztBQUVBO0VBQ0U7YUFDVztBQUNiIiwic291cmNlc0NvbnRlbnQiOlsiYm9keSB7XG4gIG1hcmdpbjogMDtcbiAgZm9udC1mYW1pbHk6IC1hcHBsZS1zeXN0ZW0sIEJsaW5rTWFjU3lzdGVtRm9udCwgJ1NlZ29lIFVJJywgJ1JvYm90bycsICdPeHlnZW4nLFxuICAgICdVYnVudHUnLCAnQ2FudGFyZWxsJywgJ0ZpcmEgU2FucycsICdEcm9pZCBTYW5zJywgJ0hlbHZldGljYSBOZXVlJyxcbiAgICBzYW5zLXNlcmlmO1xuICAtd2Via2l0LWZvbnQtc21vb3RoaW5nOiBhbnRpYWxpYXNlZDtcbiAgLW1vei1vc3gtZm9udC1zbW9vdGhpbmc6IGdyYXlzY2FsZTtcbn1cblxuY29kZSB7XG4gIGZvbnQtZmFtaWx5OiBzb3VyY2UtY29kZS1wcm8sIE1lbmxvLCBNb25hY28sIENvbnNvbGFzLCAnQ291cmllciBOZXcnLFxuICAgIG1vbm9zcGFjZTtcbn1cbiJdLCJzb3VyY2VSb290IjoiIn0= */</style><style>.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.container {
+  align-items: center;
+}
+
+tr,td {
+    padding: 10px;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.btn {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  align-items: center;
+}
+
+.btn-group button {
+  background-color: #F5F5F5;
+  border: 1px solid #C4CCD8; 
+  color: #002244; 
+  padding: 20px 40px; 
+  cursor: pointer; 
+  width: 250px;
+  display: block; 
+  border-radius: 9px;
+}
+
+.btn-group button:not(:last-child) {
+  border-bottom: none; 
+}
+
+.btn-group button:hover {
+  background-color: #D0D0D0;
+}
+
+body {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9BcHAuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Usa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0Usc0JBQXNCO0VBQ3RCLGlCQUFpQjtFQUNqQixhQUFhO0VBQ2Isc0JBQXNCO0VBQ3RCLG1CQUFtQjtFQUNuQix1QkFBdUI7RUFDdkIsNkJBQTZCO0VBQzdCLFlBQVk7QUFDZDs7QUFFQTtFQUNFLGNBQWM7QUFDaEI7O0FBRUE7RUFDRSxtQkFBbUI7QUFDckI7O0FBRUE7SUFDSSxhQUFhO0FBQ2pCOztBQUVBO0VBQ0UsU0FBUztFQUNULGtCQUFrQjtFQUNsQixRQUFRO0VBRVIsMkJBQTJCO0FBQzdCOztBQUVBO0VBQ0UsNkJBQTZCO0VBQzdCLDRCQUE0QjtFQUM1QixZQUFZO0VBQ1osZUFBZTtFQUNmLGdCQUFnQjtFQUNoQixhQUFhO0VBQ2IsbUJBQW1CO0FBQ3JCOztBQUVBO0VBQ0UseUJBQXlCO0VBQ3pCLHlCQUF5QjtFQUN6QixjQUFjO0VBQ2Qsa0JBQWtCO0VBQ2xCLGVBQWU7RUFDZixZQUFZO0VBQ1osY0FBYztFQUNkLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLG1CQUFtQjtBQUNyQjs7QUFFQTtFQUNFLHlCQUF5QjtBQUMzQjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixrQkFBa0I7QUFDcEIiLCJzb3VyY2VzQ29udGVudCI6WyIuQXBwIHtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuXG4uQXBwLWhlYWRlciB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG4gIG1pbi1oZWlnaHQ6IDEwMHZoO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgZm9udC1zaXplOiBjYWxjKDEwcHggKyAydm1pbik7XG4gIGNvbG9yOiBibGFjaztcbn1cblxuLkFwcC1saW5rIHtcbiAgY29sb3I6ICM2MWRhZmI7XG59XG5cbi5jb250YWluZXIge1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xufVxuXG50cix0ZCB7XG4gICAgcGFkZGluZzogMTBweDtcbn1cblxuLnZlcnRpY2FsLWNlbnRlciB7XG4gIG1hcmdpbjogMDtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICB0b3A6IDUwJTtcbiAgLW1zLXRyYW5zZm9ybTogdHJhbnNsYXRlWSgtNTAlKTtcbiAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKC01MCUpO1xufVxuXG4uYnRuIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogdHJhbnNwYXJlbnQ7XG4gIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XG4gIGJvcmRlcjogbm9uZTtcbiAgY3Vyc29yOiBwb2ludGVyO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBvdXRsaW5lOiBub25lO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xufVxuXG4uYnRuLWdyb3VwIGJ1dHRvbiB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNGNUY1RjU7XG4gIGJvcmRlcjogMXB4IHNvbGlkICNDNENDRDg7IFxuICBjb2xvcjogIzAwMjI0NDsgXG4gIHBhZGRpbmc6IDIwcHggNDBweDsgXG4gIGN1cnNvcjogcG9pbnRlcjsgXG4gIHdpZHRoOiAyNTBweDtcbiAgZGlzcGxheTogYmxvY2s7IFxuICBib3JkZXItcmFkaXVzOiA5cHg7XG59XG5cbi5idG4tZ3JvdXAgYnV0dG9uOm5vdCg6bGFzdC1jaGlsZCkge1xuICBib3JkZXItYm90dG9tOiBub25lOyBcbn1cblxuLmJ0bi1ncm91cCBidXR0b246aG92ZXIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjRDBEMEQwO1xufVxuXG5ib2R5IHtcbiAgb3ZlcmZsb3cteTogaGlkZGVuO1xuICBvdmVyZmxvdy14OiBoaWRkZW47XG59Il0sInNvdXJjZVJvb3QiOiIifQ== */</style><style>* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Playfair Display', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    min-height: 100em;
+}
+ul {
+    margin-right: 0;
+    list-style: none;
+}
+
+h2, h3, a {
+    color: #a2a2a2;
+}
+
+a {
+    text-decoration: none;
+}
+
+.logo {
+    padding-right: 10;
+    font-size: 1.3em;
+}
+
+.main-nav {
+    margin-top: 0px;
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo a, .main-nav a {
+    padding: 10px 20px;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+}
+
+.main-nav a {
+    color: #a2a2a2;
+    font-size: 1.5em;
+}
+
+.main-nav a:hover {
+    color: #d5f0f6;
+}
+
+.header {
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+/* =================================
+  Media Queries
+==================================== */
+
+@media (min-width: 10px) {
+    .header,
+    .main-nav {
+        display: flex;
+    }
+    .header {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+    }
+}
+
+@media (min-width: 20px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9OYXZiYXIuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksc0JBQXNCO0FBQzFCO0FBQ0E7SUFDSSwyQ0FBMkM7SUFDM0MsZ0JBQWdCO0lBQ2hCLFNBQVM7SUFDVCxpQkFBaUI7QUFDckI7QUFDQTtJQUNJLGVBQWU7SUFDZixnQkFBZ0I7QUFDcEI7O0FBRUE7SUFDSSxjQUFjO0FBQ2xCOztBQUVBO0lBQ0kscUJBQXFCO0FBQ3pCOztBQUVBO0lBQ0ksaUJBQWlCO0lBQ2pCLGdCQUFnQjtBQUNwQjs7QUFFQTtJQUNJLGVBQWU7SUFDZixXQUFXO0lBQ1gsa0JBQWtCO0lBQ2xCLFFBQVE7SUFDUixTQUFTO0lBQ1QsZ0NBQWdDO0FBQ3BDOztBQUVBO0lBQ0ksa0JBQWtCO0lBQ2xCLHlCQUF5QjtJQUN6QixrQkFBa0I7SUFDbEIsY0FBYztBQUNsQjs7QUFFQTtJQUNJLGNBQWM7SUFDZCxnQkFBZ0I7QUFDcEI7O0FBRUE7SUFDSSxjQUFjO0FBQ2xCOztBQUVBO0lBQ0ksaUJBQWlCO0lBQ2pCLG9CQUFvQjtBQUN4Qjs7QUFFQTs7c0NBRXNDOztBQUV0QztJQUNJOztRQUVJLGFBQWE7SUFDakI7SUFDQTtRQUNJLHNCQUFzQjtRQUN0QixtQkFBbUI7UUFDbkIsV0FBVztRQUNYLGNBQWM7UUFDZCxrQkFBa0I7SUFDdEI7QUFDSjs7QUFFQTtJQUNJO1FBQ0ksbUJBQW1CO1FBQ25CLDhCQUE4QjtJQUNsQzs7QUFFSiIsInNvdXJjZXNDb250ZW50IjpbIioge1xyXG4gICAgYm94LXNpemluZzogYm9yZGVyLWJveDtcclxufVxyXG5ib2R5IHtcclxuICAgIGZvbnQtZmFtaWx5OiAnUGxheWZhaXIgRGlzcGxheScsIHNhbnMtc2VyaWY7XHJcbiAgICBsaW5lLWhlaWdodDogMS42O1xyXG4gICAgbWFyZ2luOiAwO1xyXG4gICAgbWluLWhlaWdodDogMTAwZW07XHJcbn1cclxudWwge1xyXG4gICAgbWFyZ2luLXJpZ2h0OiAwO1xyXG4gICAgbGlzdC1zdHlsZTogbm9uZTtcclxufVxyXG5cclxuaDIsIGgzLCBhIHtcclxuICAgIGNvbG9yOiAjYTJhMmEyO1xyXG59XHJcblxyXG5hIHtcclxuICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcclxufVxyXG5cclxuLmxvZ28ge1xyXG4gICAgcGFkZGluZy1yaWdodDogMTA7XHJcbiAgICBmb250LXNpemU6IDEuM2VtO1xyXG59XHJcblxyXG4ubWFpbi1uYXYge1xyXG4gICAgbWFyZ2luLXRvcDogMHB4O1xyXG4gICAgZmxvYXQ6IG5vbmU7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICB0b3A6IDUwJTtcclxuICAgIGxlZnQ6IDUwJTtcclxuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xyXG59XHJcblxyXG4ubG9nbyBhLCAubWFpbi1uYXYgYSB7XHJcbiAgICBwYWRkaW5nOiAxMHB4IDIwcHg7XHJcbiAgICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgZGlzcGxheTogYmxvY2s7XHJcbn1cclxuXHJcbi5tYWluLW5hdiBhIHtcclxuICAgIGNvbG9yOiAjYTJhMmEyO1xyXG4gICAgZm9udC1zaXplOiAxLjVlbTtcclxufVxyXG5cclxuLm1haW4tbmF2IGE6aG92ZXIge1xyXG4gICAgY29sb3I6ICNkNWYwZjY7XHJcbn1cclxuXHJcbi5oZWFkZXIge1xyXG4gICAgcGFkZGluZy10b3A6IC41ZW07XHJcbiAgICBwYWRkaW5nLWJvdHRvbTogLjVlbTtcclxufVxyXG5cclxuLyogPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XHJcbiAgTWVkaWEgUXVlcmllc1xyXG49PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0gKi9cclxuXHJcbkBtZWRpYSAobWluLXdpZHRoOiAxMHB4KSB7XHJcbiAgICAuaGVhZGVyLFxyXG4gICAgLm1haW4tbmF2IHtcclxuICAgICAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgfVxyXG4gICAgLmhlYWRlciB7XHJcbiAgICAgICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcclxuICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gICAgICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgICAgIG1hcmdpbjogMCBhdXRvO1xyXG4gICAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICAgIH1cclxufVxyXG5cclxuQG1lZGlhIChtaW4td2lkdGg6IDIwcHgpIHtcclxuICAgIC5oZWFkZXIge1xyXG4gICAgICAgIGZsZXgtZGlyZWN0aW9uOiByb3c7XHJcbiAgICAgICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xyXG4gICAgfVxyXG5cclxufVxyXG4iXSwic291cmNlUm9vdCI6IiJ9 */</style></head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><header class="header"><h1 class="logo"><a href="http://localhost:3000/settings"><img src="./DpIT Webapp_files/settings.56a31d586c42cc032a05.png" alt="Settings" style="height: 30px; margin-left: 0px;"></a></h1><ul class="main-nav"><li><a href="http://localhost:3000/">Manual</a></li><p style="color: rgb(162, 162, 162); font-size: 17px;">/</p><li><a href="http://localhost:3000/auto">Auto</a></li></ul></header><div class="App"><div style="display: inline-flex; align-items: center; padding-top: 115.2px; justify-content: space-between; gap: 153.6px;"><div style="display: inline-table;"><tr><td><button class="btn"> <img src="./DpIT Webapp_files/rotate left.f0f0e78285ffa2db2e13.jpeg" alt="Rotate Left" style="height: 100.2px;"> </button></td><td><button class="btn"> <img src="./DpIT Webapp_files/up.b0c817079985cb311a07.png" alt="Up" style="height: 115.2px;"> </button></td><td><button class="btn"> <img src="./DpIT Webapp_files/rotate right.34cf93a0b1dedb664642.jpeg" alt="Rotate Right" style="height: 100.2px;"> </button></td></tr><tr><td><button class="btn"> <img src="./DpIT Webapp_files/left.108c88efaeb67923b612.png" alt="Left" style="height: 115.2px;"> </button></td><td><button class="btn"> <img src="./DpIT Webapp_files/stop.26d48066c40344db79a8.png" alt="Settings" style="height: 115.2px;"> </button></td><td><button class="btn"> <img src="./DpIT Webapp_files/right.8279a0163b58b1c3a841.png" alt="Right" style="height: 115.2px;"> </button></td></tr><tr><td></td><td><button class="btn"> <img src="./DpIT Webapp_files/down.4986ded1733f675b3b1f.png" alt="Down" style="height: 115.2px;"> </button></td><td></td></tr></div><table style="width: 307.2px; height: 153.6px; border-collapse: collapse; color: black; background-color: rgb(245, 245, 245); border-radius: 17px;"><thead><tr><th style="border: 2px solid rgb(0, 34, 68); background-color: rgb(192, 192, 192); border-top-left-radius: 17px;">Sensor</th><th style="border: 2px solid rgb(0, 34, 68); background-color: rgb(192, 192, 192); border-top-right-radius: 17px;">Value</th></tr></thead><tbody><tr><td style="text-align: center; border: 2px solid rgb(0, 34, 68);">Sensor1</td><td style="text-align: center; border: 2px solid rgb(0, 34, 68);">Value1</td></tr><tr><td style="text-align: center; border: 2px solid rgb(0, 34, 68);">Sensor2</td><td style="text-align: center; border: 2px solid rgb(0, 34, 68);">Value2</td></tr><tr><td style="text-align: center; border: 2px solid rgb(0, 34, 68);">Sensor3</td><td style="text-align: center; border: 2px solid rgb(0, 34, 68);">Value3</td></tr><tr><td style="text-align: center; border: 2px solid rgb(0, 34, 68);">Sensor4</td><td style="text-align: center; border: 2px solid rgb(0, 34, 68);">Value4</td></tr></tbody></table></div></div></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  
+
+</body></html>

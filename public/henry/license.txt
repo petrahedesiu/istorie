@@ -1,0 +1,11 @@
+Model Information:
+* title:	HMS Savage
+* source:	https://sketchfab.com/3d-models/hms-savage-c13893680b79494bb9bdd3c39fb9142f
+* author:	mountvernon (https://sketchfab.com/mountvernon)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "HMS Savage" (https://sketchfab.com/3d-models/hms-savage-c13893680b79494bb9bdd3c39fb9142f) by mountvernon (https://sketchfab.com/mountvernon) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
